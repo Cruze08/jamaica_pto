@@ -1,7 +1,7 @@
 app_name = "jamaica_pto"
 app_title = "Jamaica Pto"
-app_publisher = "Ankit"
-app_description = "Hy"
+app_publisher = "Yog enteprise solutions"
+app_description = " PTO Tracking System "
 app_email = "loharankit08@gmail.com"
 app_license = "MIT"
 
@@ -213,3 +213,24 @@ app_license = "MIT"
 # auth_hooks = [
 # 	"jamaica_pto.auth.validate"
 # ]
+
+doc_events = {
+    "Branch":{
+        "validate":"jamaica_pto.override.vacation.new_leave_allocation_of_2weeks"
+    },
+    "Timesheet":{
+        "validate":"jamaica_pto.override.mark_attendance_by_timesheet.mark_attendance_on_2hrs_complete"
+    },
+    "Timesheet":{
+        "after_submit":"jamaica_pto.override.mark_attendance_by_timesheet.submit_attendance_on_timesheet_submission"
+    }
+}
+
+fixtures = [ {
+        "dt": "Custom Field",
+        "filters": [
+            [
+                "dt", "in", ["Paid Time Off Settings"]
+            ]
+        ]
+    }]

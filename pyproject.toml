@@ -1,9 +1,9 @@
 [project]
 name = "jamaica_pto"
 authors = [
-    { name = "Ankit", email = "loharankit08@gmail.com"}
+    { name = "Yog enteprise solutions", email = "loharankit08@gmail.com"}
 ]
-description = "Hy"
+description = " PTO Tracking System "
 requires-python = ">=3.10"
 readme = "README.md"
 dynamic = ["version"]
